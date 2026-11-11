@@ -1,7 +1,7 @@
-"""Seeding riproducibile.
+"""Reproducible seeding.
 
-Imposta i seed per le librerie disponibili. PyTorch è opzionale: il template
-base non lo richiede, quindi l'import è protetto.
+Sets the seeds for the available libraries. PyTorch is optional: the base
+template does not require it, so the import is guarded.
 """
 
 from __future__ import annotations
@@ -13,11 +13,11 @@ import numpy as np
 
 
 def set_seed(seed: int = 0) -> int:
-    """Imposta i seed globali per riproducibilità. Restituisce il seed usato."""
+    """Set the global seeds for reproducibility. Returns the seed used."""
     os.environ["PYTHONHASHSEED"] = str(seed)
     random.seed(seed)
     np.random.seed(seed)
-    try:  # pragma: no cover - dipende dall'ambiente del progetto
+    try:  # pragma: no cover - depends on the project's environment
         import torch
 
         torch.manual_seed(seed)

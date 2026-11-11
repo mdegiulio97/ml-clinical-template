@@ -1,7 +1,7 @@
-"""Utility condivise per i mini-progetti di ML clinico.
+"""Shared utilities for the small clinical ML projects.
 
-Mantieni qui solo helper realmente trasversali (seeding, metriche di base,
-I/O). La logica specifica di ciascun progetto vive nel suo package.
+Keep only truly cross-cutting helpers here (seeding, basic metrics,
+I/O). Project-specific logic lives in each project's own package.
 """
 
 from clinical_template.seeding import set_seed

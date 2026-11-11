@@ -1,7 +1,7 @@
 [project]
 name = "clinical-template"
 version = "0.1.0"
-description = "Template riusabile per mini-progetti di ML clinico (app Streamlit + pipeline riproducibile)"
+description = "Reusable template for small clinical ML projects (Streamlit app + reproducible pipeline)"
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }

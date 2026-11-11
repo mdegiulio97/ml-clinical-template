@@ -1,45 +1,45 @@
 # ml-clinical-template
 
-> Template riusabile per mini-progetti di **Machine Learning su dati clinici**: app Streamlit + pipeline riproducibile + CI.
+> Reusable template for small **machine learning projects on clinical data**: Streamlit app + reproducible pipeline + CI.
 
-Questo repo è la base comune del portfolio. Ogni progetto (Phasor, AI/XAI, RAG, PINN, GenAI) parte da questa struttura per garantire coerenza e riproducibilità.
+This repo is the shared base of the portfolio. Each project (Phasor, AI/XAI, RAG, PINN, GenAI) starts from this structure so that layout and reproducibility stay consistent.
 
-## Struttura
+## Structure
 
 ```
-app/                 # App Streamlit (app/main.py)
-src/clinical_template # Utility condivise (seeding, ...)
-notebooks/           # Validazione riproducibile (01_, 02_, ...)
-data/                # Solo script di download; i dati NON sono committati
+app/                 # Streamlit app (app/main.py)
+src/clinical_template # Shared utilities (seeding, ...)
+notebooks/           # Reproducible validation (01_, 02_, ...)
+data/                # Download scripts only; the data are NOT committed
 scripts/             # download_data.py, train.py, evaluate.py
-tests/               # pytest (smoke test su IO/shape/metriche)
-results/             # Figure e metriche generate (piccole, committabili)
+tests/               # pytest (smoke tests on IO/shapes/metrics)
+results/             # Generated figures and metrics (small, safe to commit)
 .github/workflows/   # CI: ruff + pytest
 ```
 
-## Come eseguire (uv)
+## How to run (uv)
 
 ```bash
-uv sync --extra dev            # crea .venv con Python 3.12 e installa tutto
-uv run pytest -q               # esegue i test
+uv sync --extra dev            # creates .venv with Python 3.12 and installs everything
+uv run pytest -q               # runs the tests
 uv run ruff check .            # lint
 uv run streamlit run app/main.py
 ```
 
-## Standard del portfolio
+## Portfolio conventions
 
-- **Dati pubblici e citati**: ogni dataset ha fonte + licenza nel README. I dati non si committano.
-- **Riproducibilità**: seed fissati (`clinical_template.set_seed`), `uv.lock` versionato, notebook eseguibili end-to-end.
-- **Valore dimostrato**: ogni progetto riporta almeno una **metrica quantitativa** + una **baseline**.
-- **Citazioni**: riferimenti con DOI/PMID/URL, mai inventati.
+- **Public, cited data**: every dataset has its source and licence in the README. Data are not committed.
+- **Reproducibility**: fixed seeds (`clinical_template.set_seed`), `uv.lock` under version control, notebooks that run end to end.
+- **Measured results**: every project reports at least one **quantitative metric** and a **baseline**.
+- **Citations**: references with DOI/PMID/URL, never made up.
 
-## Come duplicare per un nuovo progetto
+## How to copy it for a new project
 
-1. Copia la cartella e rinominala (es. `phasor-flim-explorer`).
-2. Rinomina il package `src/clinical_template` → `src/<nome_progetto>` e aggiorna `pyproject.toml`.
-3. Implementa pipeline, app, notebook e test.
-4. Aggiorna questo README con pitch, screenshot, dataset, metriche e riferimenti.
+1. Copy the folder and rename it (e.g. `phasor-flim-explorer`).
+2. Rename the package `src/clinical_template` → `src/<project_name>` and update `pyproject.toml`.
+3. Implement the pipeline, app, notebooks and tests.
+4. Update this README with a short description, screenshots, dataset, metrics and references.
 
-## Licenza
+## License
 
-Codice: MIT (vedi `LICENSE`). I dataset hanno licenze proprie: verificale prima dell'uso.
+Code: MIT (see `LICENSE`). Datasets have their own licences: check them before use.
