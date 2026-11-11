@@ -1,7 +1,7 @@
-"""App Streamlit di esempio del template.
+"""Example Streamlit app for the template.
 
-Sostituisci questo contenuto con l'interfaccia specifica del progetto.
-Avvia con:  uv run streamlit run app/main.py
+Replace this content with the project-specific interface.
+Run with:  uv run streamlit run app/main.py
 """
 
 import streamlit as st
@@ -14,8 +14,8 @@ set_seed(0)
 
 st.title("🧪 Clinical ML Template")
 st.write(
-    "Template riusabile per mini-progetti di ML clinico. "
-    "Duplica questa cartella, rinomina il package e implementa la tua pipeline."
+    "Reusable template for small clinical ML projects. "
+    "Copy this folder, rename the package and implement your pipeline."
 )
 
-st.success("Ambiente attivo correttamente.")
+st.success("Environment is set up correctly.")

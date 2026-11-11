@@ -1,4 +1,4 @@
-"""Smoke test del template: l'ambiente è sano e il seeding è deterministico."""
+"""Template smoke tests: the environment works and seeding is deterministic."""
 
 import numpy as np
 
