@@ -1,5 +1,7 @@
 # ml-clinical-template
 
+[![CI](https://github.com/mdegiulio97/ml-clinical-template/actions/workflows/ci.yml/badge.svg)](https://github.com/mdegiulio97/ml-clinical-template/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 > Reusable template for small **machine learning projects on clinical data**: Streamlit app + reproducible pipeline + CI.
 
 This repo is the shared base of the portfolio. Each project (Phasor, AI/XAI, RAG, PINN, GenAI) starts from this structure so that layout and reproducibility stay consistent.
